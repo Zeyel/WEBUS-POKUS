@@ -11,7 +11,11 @@
 			include "header.php";
 		?>
 	</header>
-
+	<nav>
+		<?php
+			include "nav.php";
+		?>
+	</nav>
 
 
 

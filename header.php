@@ -1,3 +1,3 @@
-<div class='jumbotron jumbotron-fluid'>
-	<h1>SALUT TU VEUX D KOKTAIL?</h1>
+<div class='jumbotron'>
+	<h1>COCKTAILOTRON-MK2</h1>
 </div>
