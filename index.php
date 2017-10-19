@@ -4,9 +4,19 @@
 <title>Cocktails</title>
 </head>
 
-<header>include "header.php"</header>
+<header>
+  <?php
+include "header.php";
+?>
+</header>
 
 <body></body>
 
-<footer>include "footer.php"</footer>
+<footer>
+
+<?php
+include "footer.php";
+?>
+
+</footer>
 </html>
