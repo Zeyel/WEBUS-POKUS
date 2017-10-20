@@ -17,10 +17,11 @@
 			include "nav.php";
 		?>
 	</nav>
+	<main>
 
+			<img src="https://i.ytimg.com/vi/fXUwEvTnxuA/maxresdefault.jpg" width="500px" height="500px"  alt="Such wow, much skill"/>
 
-
-
+	</main>
 	<footer>
 		<?php
 			include "footer.php";
