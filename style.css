@@ -1,0 +1,16 @@
+.test {
+  width:inherit;
+  padding: 5px;
+  border: 3px solid green;
+  margin: 0;
+}
+/* Les éléments a dont le père est la classe test */
+.test>a {
+  font-style: italic;
+  width: auto;
+  border: 1px solid red;
+}
+/* Les éléments a survolés dont le père est la classe test */
+.test>a:hover {
+  background-color: black;
+}
