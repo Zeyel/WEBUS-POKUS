@@ -1,24 +1,24 @@
-
-<!-- Bar de connexion-->
-<div class="row">
-	<div class="col-md-8"></div>
-	<div class="col-md-4">
-		<form class="form-inline">
-			<div class="form-group">
-				<label class="sr-only">E-mail</label>
-				<input type="email" class="form-control" placeholder="Email">
+<div class="container-fluid">
+	<!-- Bar de connexion-->
+	<div class ="row">
+		<div class ="col float-right">
+			<div class="float-right">
+				<form class="form-inline">
+					<input type="email" class="form-control" placeholder="Email">
+					<input type="password" class="form-control" placeholder="Password">
+					<button type="submit" class="btn btn-default">Connexion</button>
+				</form>
+				<a href="...">Pas encore inscrit ?</a>
 			</div>
-			
-			<div class="form-group">
-				<label class="sr-only">Mot de passe</label>
-				<input type="password" class="form-control" placeholder="Password">
-			</div>
-			<button type="submit" class="btn btn-default">Connexion</button>
-		</form>
+		</div>
 	</div>
-</div>
-
-<!-- Bandeau -->
-<div class="jumbotron">
-	<h1>Cocktailotron</h1>
+	
+	<!-- Bandeau -->
+	<div class="row">
+		<div class ="col">
+			<div class="jumbotron">
+				<h1>Cocktailotron</h1>
+			</div>
+		</div>
+	</div>
 </div>

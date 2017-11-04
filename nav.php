@@ -1,14 +1,23 @@
-<div class="test">
-	<a href='index.php?page=acceuil' >
-		accueil
-	</a>
-	<a href='acceuil.php' >
-		accueil
-	</a>
-	<a href='acceuil.php' >
-		accueil
-	</a>
-	<a href='acceuil.php' >
-		accueil
-	</a>
+<div class = "container-fluid">
+ 	<div class="row">
+	
+		<div class="col text-center">
+			<a href='index.php?page=acceuil'>
+				<button class="btn btn-block">Accueil</button>
+			</a>
+		</div>
+		
+		<div class="col text-center">
+			<a href='index.php?page=acceuil'>
+				<button class="btn btn-block">Accueil</button>
+			</a>
+		</div>
+		
+		<div class="col text-center">
+			<a href='index.php?page=acceuil'>
+				<button class="btn btn-block">Accueil</button>
+			</a>
+		</div>
+
+	</div>
 </div>
