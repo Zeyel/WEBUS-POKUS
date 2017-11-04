@@ -1,5 +1,5 @@
 <div class="test">
-	<a href='acceuil.php' >
+	<a href='index.php?page=acceuil' >
 		accueil
 	</a>
 	<a href='acceuil.php' >
