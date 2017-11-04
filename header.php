@@ -16,9 +16,7 @@
 	<!-- Bandeau -->
 	<div class="row">
 		<div class ="col">
-			<div class="jumbotron">
-				<h1>Cocktailotron</h1>
-			</div>
+			<h1>Cocktailotron</h1>
 		</div>
 	</div>
 </div>
