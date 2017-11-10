@@ -1,13 +1,54 @@
+<?php
+include "Association.php"
+?>
+
 <div class="container-fluid">
 	<div id="carousel" class="carousel slide" data-ride="carousel">
-		
+
 		<!--puces-->
 		<ol class="carousel-indicators">
 			<li data-target="#carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#carousel" data-slide-to="1"></li>
 			<li data-target="#carousel" data-slide-to="2"></li>
 		</ol>
-		
+
+<!--contenu généré PHP
+			COCKTAILS DU JOUR-->
+
+			<?php /*
+				for ($i=0; $i<=2; $i++) {
+				echo ('
+				<div class="carousel-inner" role="listbox">
+						<div class="carousel-item active">
+							<div class="row">
+								<div class="col-md-2"></div>
+								<div class="col-md-2">
+									<img class="d-block img-fluid" src=
+									');
+						$random = array_rand($Recettes);
+						echo($random);
+						$temp = "Mystère.PNG";
+						foreach($Association as $nom) {
+							if ($random['titre'] == $nom) {
+								$temp = '"Photos/'.$nom.'.jpg"';
+								break;
+							}
+							echo(
+									$temp.' alt="First slide">
+									</div>
+									<div class="col-md-8">
+										<h1>'.$random['titre'].'</h1>
+										<br/>
+										<p>'.$random['ingredients'].'<br/><br/>'.$random['preparation'].'</p>
+									</div>
+								</div>
+							</div>
+							');
+				}
+			}
+*/
+			 ?>
+
 		<!--contenu-->
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
@@ -17,11 +58,13 @@
 						<img class="d-block img-fluid" src="Photos/Bora_bora.jpg" alt="First slide">
 					</div>
 					<div class="col-md-8">
-						<h1>Bonjour je suis un texte qui te met dans le contexte</h1>
+						<h1>NOM COCKTAIL</h1>
+						<br/>
+						<p> Ingrédients / Recette </p>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="carousel-item">
 				<div class="row">
 					<div class="col-md-2"></div>
@@ -33,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="carousel-item">
 				<div class="row">
 					<div class="col-md-2"></div>
@@ -46,7 +89,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!--sliders-->
 		<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,7 +100,7 @@
 			<span class="sr-only">Next</span>
 		</a>
 	</div>
-	
+
 	<!-- un tas d'espace-->
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -65,6 +108,6 @@
 	test<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	test2
-	
-	
+
+
 </div>
