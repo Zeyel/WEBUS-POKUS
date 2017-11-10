@@ -8,7 +8,7 @@
 					<input type="password" class="form-control" placeholder="Password">
 					<button type="submit" class="btn btn-default">Connexion</button>
 				</form>
-				<a href="...">Pas encore inscrit ?</a>
+				<a href="index.php?page=inscription">Pas encore inscrit ?</a>
 			</div>
 		</div>
 	</div>
