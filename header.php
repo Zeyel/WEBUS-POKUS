@@ -1,6 +1,9 @@
 <div class="container-fluid">
 	<!-- Bar de connexion-->
 	<div class ="row">
+		<div class='col-md-4 text-center'>
+			<h1>Cocktailotron</h1>
+		</div>
 		<div class ="col float-right">
 			<div class="float-right">
 				<form class="form-inline">
@@ -10,13 +13,6 @@
 				</form>
 				<a href="index.php?page=inscription">Pas encore inscrit ?</a>
 			</div>
-		</div>
-	</div>
-	
-	<!-- Bandeau -->
-	<div class="row">
-		<div class ="col">
-			<h1>Cocktailotron</h1>
 		</div>
 	</div>
 </div>
