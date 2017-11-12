@@ -1,26 +1,25 @@
 <!-- Association des cocktails avec leurs images -->
 <?php
-  include "Donnees.inc.php";
 
 $Association=array (
-  'Black velvet' => 'Black_Velvet',
-  'Bloody Mary' => 'Bloody_mary',
-  'Bora bora' => 'Bora_bora',
+  'Black_velvet' => 'Black velvet',
+  'Bloody_Mary' => 'Bloody Mary',
+  'Bora_bora' => 'Bora bora',
   'Builder' => 'Builder',
-  'Caïpirinha' => 'Caipirinha',
-  'Coconut kiss' => 'Coconut_kiss',
-  'Cuba libre' => 'Cuba_libre',
-  'Frosty lime' => 'Frosty_lime',
-  'Le vandetta' => 'Le_vandetta',
+  'Caipirinha' => 'Caïpirinha',
+  'Coconut_kiss' => 'Coconut kiss',
+  'Cuba_libre' => 'Cuba libre',
+  'Frosty_lime' => 'Frosty lime',
+  'Le_vandetta' => 'Le vandetta',
   'Margarita' => 'Margarita',
   'Mojito' => 'Mojito',
-  'Piña Colada' => 'Pina_colada',
-  'Piña Colada (cocktail)' => 'Pina_colada',
+  'Pina_colada' => 'Piña Colada',
+  'Pina_colada' => 'Piña Colada (cocktail)',
   'Raifortissimo' => 'Raifortissimo',
-  'Sangria sans alcool' => 'Sangria_sans_alcool',
+  'Sangria_sans_alcool' => 'Sangria sans alcool',
   'Screwdriver' => 'Screwdriver',
-  'Shoot up' => 'Shoot_up',
-  'Tequila sunrise' => 'Tequila_sunrise',
-  'Ti\'punch' => 'Tipunch'
+  'Shoot_up' => 'Shoot up',
+  'Tequila_sunrise' => 'Tequila sunrise',
+  'Tipunch' => 'Ti\'punch'
 );
 ?>

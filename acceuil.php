@@ -1,4 +1,5 @@
 <?php
+include "Donnees.inc.php";
 include "Association.php"
 ?>
 
@@ -15,41 +16,40 @@ include "Association.php"
 <!--contenu généré PHP
 			COCKTAILS DU JOUR-->
 
-			<?php /*
+			<?php
+				echo ('		<div class="carousel-inner" role="listbox">');
 				for ($i=0; $i<=2; $i++) {
-				echo ('
-				<div class="carousel-inner" role="listbox">
-						<div class="carousel-item active">
-							<div class="row">
-								<div class="col-md-2"></div>
-								<div class="col-md-2">
-									<img class="d-block img-fluid" src=
-									');
+				if ($i==0)
+					echo ('<div class="carousel-item active">');
+					echo ('
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-2">
+									<img class="d-block img-fluid" src=');
 						$random = array_rand($Recettes);
-						echo($random);
 						$temp = "Mystère.PNG";
-						foreach($Association as $nom) {
-							if ($random['titre'] == $nom) {
-								$temp = '"Photos/'.$nom.'.jpg"';
+						foreach($Association as $key => $nom) {
+							if ($Recettes[$random]['titre'] == $nom) {
+								$temp = '"Photos/'.$key.'.jpg"';
 								break;
 							}
+						}
 							echo(
-									$temp.' alt="First slide">
+									$temp.' height="150px" width="150px" alt="First slide">
 									</div>
 									<div class="col-md-8">
-										<h1>'.$random['titre'].'</h1>
+										<h1>'.$Recettes[$random]['titre'].'</h1>
 										<br/>
-										<p>'.$random['ingredients'].'<br/><br/>'.$random['preparation'].'</p>
+										<p>'.$Recettes[$random]['ingredients'].'<br/><br/>'.$random['preparation'].'</p>
+										</div>
 									</div>
 								</div>
-							</div>
 							');
 				}
-			}
-*/
+				echo ('</div>');
 			 ?>
 
-		<!--contenu-->
+		<!--contenu
 		<div class="carousel-inner" role="listbox">
 			<div class="carousel-item active">
 				<div class="row">
@@ -89,7 +89,7 @@ include "Association.php"
 				</div>
 			</div>
 		</div>
-
+-->
 		<!--sliders-->
 		<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
