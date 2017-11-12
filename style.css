@@ -1,16 +1,29 @@
-.test {
-  width:inherit;
-  padding: 5px;
-  border: 3px solid green;
-  margin: 0;
+html {
+  height: 100%;
 }
-/* Les éléments a dont le père est la classe test */
-.test>a {
-  font-style: italic;
-  width: auto;
-  border: 1px solid red;
+
+html body {
+  height: 100%;
+  overflow: hidden;
 }
-/* Les éléments a survolés dont le père est la classe test */
-.test>a:hover {
-  background-color: black;
+
+main {
+  position: absolute;
+  width : 100%;
+  top: 130px;
+  bottom: 30px;
+  overflow-y: scroll;
+}
+
+header nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+footer {
+    position: absolute;
+    whidth : 100%;
+    bottom: 0;
+    height: 30px;
 }
