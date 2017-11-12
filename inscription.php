@@ -5,8 +5,7 @@
 	$verifPseudo=true;
 
 	if(isset($_POST['submit']))
-	{ 
-		
+	{
 		//vérif email
 		if(!isset($_POST['email'])){
 			$verifEmail="Veuillez renseigner le champ";
@@ -65,13 +64,12 @@
 			fputs($fichier, '
 <?php
 $uti = '.var_export($uti, true).';
-?>
-			');
+?>'
+		);
 			fclose($fichier);
-			
 			//on redirige
-			
-			header(succes.php);
+			header('Location: index.php?page=succes');
+			echo"BONJOUR";
 		}
 	}
 ?>
