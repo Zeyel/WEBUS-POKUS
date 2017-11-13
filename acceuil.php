@@ -6,13 +6,13 @@
 
 <div class="container-fluid">
 	<div id="carousel" class="carousel slide jumbotron" data-ride="carousel">
-		
+
 		<!--puces-->
 		<ol class="carousel-indicators">
 			<?php
-			
-				for($i = 0; $i < $N;$i++){ 
-					if($i == 1){				
+
+				for($i = 0; $i < $N;$i++){
+					if($i == 1){
 					echo'
 				<li data-target="#carousel" data-slide-to="'.$i.'" class="active"></li>';
 					}
@@ -23,12 +23,12 @@
 				}
 			?>
 		</ol>
-		
+
 		<!--contenu-->
 		<div class="carousel-inner" role="listbox">
 			<?php
 				for($i = 1; $i <= $N;$i++){
-					if($i == 1){				
+					if($i == 1){
 					echo'
 			<div class="carousel-item active">';
 					}
@@ -38,27 +38,33 @@
 					}
 					$rnd = mt_rand(0, count($Recettes) - 1);
 					$nomFichier = "Mystère";
-					
-					if(in_array($Recettes[$rnd]['titre'], $Association)){
+
+					foreach($Association as $key => $nom) {
+					if($Recettes[$rnd]['titre'] == $key)
 						$nomFichier = $Association[$Recettes[$rnd]['titre']];
 					}
-					
+					/* A CHECK
+
+					if(in_array($Recettes[$rnd]['titre'], (key($Association)))){
+						$nomFichier = $Association[$Recettes[$rnd]['titre']];
+					}*/
+
 					echo'
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-2">
-						<img class="d-block img-fluid" src="Photos/'.$nomFichier.'.jpg">
+						<img class="d-block img-fluid" src="Photos/'.$nomFichier.'.jpg" height="150px" width="150px">
 					</div>
 					<div class="col-md-8">
 						<h1>'.$Recettes[$rnd]['titre'].'</h1>
 						<br/>
 						<ol>';
-					
+
 					foreach($Recettes[$rnd]['index'] as $num=>$ingredient){
 						echo'
 							<li>'.$ingredient.'</li>';
-					}	
-					
+					}
+
 					echo'
 						</ol>
 					</div>
@@ -67,7 +73,7 @@
 				}
 			?>
 		</div>
-		
+
 		<!--sliders-->
 		<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -87,7 +93,7 @@ Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agr
 Unde Rufinus ea tempestate praefectus praetorio ad discrimen trusus est ultimum. ire enim ipse compellebatur ad militem, quem exagitabat inopia simul et feritas,
  et alioqui coalito more in ordinarias dignitates asperum semper et saevum, ut satisfaceret atque monstraret, quam ob causam annonae convectio sit impedita.
 <br/><br/>
-Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. 
+Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus.
 qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis,
  siquid per inprudentiam gestum est remissurus ut mitis et clemens, participemque eum suae maiestatis adscisceret, futurum laborum quoque socium, quos Arctoae provinciae diu fessae poscebant.
 </div><br/>
