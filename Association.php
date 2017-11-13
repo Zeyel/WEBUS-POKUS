@@ -2,24 +2,24 @@
 <?php
 
 $Association=array (
-  'Black_velvet' => 'Black velvet',
-  'Bloody_Mary' => 'Bloody Mary',
-  'Bora_bora' => 'Bora bora',
+  'Black velvet'=>'Black_velvet' ,
+  'Bloody Mary' => 'Bloody_Mary',
+  'Bora bora' => 'Bora_bora',
   'Builder' => 'Builder',
-  'Caipirinha' => 'Caïpirinha',
-  'Coconut_kiss' => 'Coconut kiss',
-  'Cuba_libre' => 'Cuba libre',
-  'Frosty_lime' => 'Frosty lime',
-  'Le_vandetta' => 'Le vandetta',
+  'Caïpirinha' => 'Caipirinha',
+  'Coconut kiss' => 'Coconut_kiss',
+  'Cuba libre' => 'Cuba_libre',
+  'Frosty lime' => 'Frosty_lime',
+  'Le vandetta' => 'Le_vandetta',
   'Margarita' => 'Margarita',
   'Mojito' => 'Mojito',
-  'Pina_colada' => 'Piña Colada',
-  'Pina_colada' => 'Piña Colada (cocktail)',
+  'Piña Colada' => 'Pina_colada',
+  'Piña Colada (cocktail)' => 'Pina_colada',
   'Raifortissimo' => 'Raifortissimo',
-  'Sangria_sans_alcool' => 'Sangria sans alcool',
+  'Sangria sans alcool' => 'Sangria_sans_alcool',
   'Screwdriver' => 'Screwdriver',
-  'Shoot_up' => 'Shoot up',
-  'Tequila_sunrise' => 'Tequila sunrise',
-  'Tipunch' => 'Ti\'punch'
+  'Shoot up' => 'Shoot_up',
+  'Tequila sunrise' => 'Tequila_sunrise',
+  'Ti\'punch' => 'Tipunch'
 );
 ?>

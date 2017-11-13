@@ -1,95 +1,73 @@
 <?php
-include "Donnees.inc.php";
-include "Association.php"
+	include "Donnees.inc.php";
+	include "Association.php";
+	$N = 5;
 ?>
 
 <div class="container-fluid">
-	<div id="carousel" class="carousel slide" data-ride="carousel">
-
+	<div id="carousel" class="carousel slide jumbotron" data-ride="carousel">
+		
 		<!--puces-->
 		<ol class="carousel-indicators">
-			<li data-target="#carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel" data-slide-to="1"></li>
-			<li data-target="#carousel" data-slide-to="2"></li>
-		</ol>
-
-<!--contenu généré PHP
-			COCKTAILS DU JOUR-->
-
 			<?php
-				echo ('		<div class="carousel-inner" role="listbox">');
-				for ($i=0; $i<=2; $i++) {
-				if ($i==0)
-					echo ('<div class="carousel-item active">');
-					echo ('
-								<div class="row">
-									<div class="col-md-2"></div>
-									<div class="col-md-2">
-									<img class="d-block img-fluid" src=');
-						$random = array_rand($Recettes);
-						$temp = "Mystère.PNG";
-						foreach($Association as $key => $nom) {
-							if ($Recettes[$random]['titre'] == $nom) {
-								$temp = '"Photos/'.$key.'.jpg"';
-								break;
-							}
-						}
-							echo(
-									$temp.' height="150px" width="150px" alt="First slide">
-									</div>
-									<div class="col-md-8">
-										<h1>'.$Recettes[$random]['titre'].'</h1>
-										<br/>
-										<p>'.$Recettes[$random]['ingredients'].'<br/><br/>'.$random['preparation'].'</p>
-										</div>
-									</div>
-								</div>
-							');
+			
+				for($i = 0; $i < $N;$i++){ 
+					if($i == 1){				
+					echo'
+				<li data-target="#carousel" data-slide-to="'.$i.'" class="active"></li>';
+					}
+					else{
+						echo'
+				<li data-target="#carousel" data-slide-to="'.$i.'"></li>';
+					}
 				}
-				echo ('</div>');
-			 ?>
-
-		<!--contenu
+			?>
+		</ol>
+		
+		<!--contenu-->
 		<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active">
+			<?php
+				for($i = 1; $i <= $N;$i++){
+					if($i == 1){				
+					echo'
+			<div class="carousel-item active">';
+					}
+					else{
+						echo'
+			<div class="carousel-item">';
+					}
+					$rnd = mt_rand(0, count($Recettes) - 1);
+					$nomFichier = "Mystère";
+					
+					if(in_array($Recettes[$rnd]['titre'], $Association)){
+						$nomFichier = $Association[$Recettes[$rnd]['titre']];
+					}
+					
+					echo'
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-2">
-						<img class="d-block img-fluid" src="Photos/Bora_bora.jpg" alt="First slide">
+						<img class="d-block img-fluid" src="Photos/'.$nomFichier.'.jpg">
 					</div>
 					<div class="col-md-8">
-						<h1>NOM COCKTAIL</h1>
+						<h1>'.$Recettes[$rnd]['titre'].'</h1>
 						<br/>
-						<p> Ingrédients / Recette </p>
+						<ol>';
+					
+					foreach($Recettes[$rnd]['index'] as $num=>$ingredient){
+						echo'
+							<li>'.$ingredient.'</li>';
+					}	
+					
+					echo'
+						</ol>
 					</div>
 				</div>
-			</div>
-
-			<div class="carousel-item">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<img class="d-block img-fluid" src="Photos/Mojito.jpg" alt="First slide">
-					</div>
-					<div class="col-md-8">
-						<h1>Bonjour je suis un texte qui te met dans le contexte</h1>
-					</div>
-				</div>
-			</div>
-
-			<div class="carousel-item">
-				<div class="row">
-					<div class="col-md-2"></div>
-					<div class="col-md-2">
-						<img class="d-block img-fluid" src="Photos/Mojito.jpg" alt="First slide">
-					</div>
-					<div class="col-md-8">
-						<h1>Bonjour je suis un texte qui te met dans le contexte</h1>
-					</div>
-				</div>
-			</div>
+			</div>';
+				}
+			?>
 		</div>
--->
+		
 		<!--sliders-->
 		<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -102,12 +80,14 @@ include "Association.php"
 	</div>
 
 	<!-- un tas d'espace-->
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	test<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	test2
-
-
-</div>
+Abusus enim multitudine hominum, quam tranquillis in rebus diutius rexit, ex agrestibus habitaculis urbes construxit multis opibus firmas et viribus,
+ quarum ad praesens pleraeque licet Graecis nominibus appellentur, quae isdem ad arbitrium inposita sunt conditoris, primigenia tamen nomina non amittunt,
+ quae eis Assyria lingua institutores veteres indiderunt.
+<br/><br/>
+Unde Rufinus ea tempestate praefectus praetorio ad discrimen trusus est ultimum. ire enim ipse compellebatur ad militem, quem exagitabat inopia simul et feritas,
+ et alioqui coalito more in ordinarias dignitates asperum semper et saevum, ut satisfaceret atque monstraret, quam ob causam annonae convectio sit impedita.
+<br/><br/>
+Advenit post multos Scudilo Scutariorum tribunus velamento subagrestis ingenii persuasionis opifex callidus. 
+qui eum adulabili sermone seriis admixto solus omnium proficisci pellexit vultu adsimulato saepius replicando quod flagrantibus votis eum videre frater cuperet patruelis,
+ siquid per inprudentiam gestum est remissurus ut mitis et clemens, participemque eum suae maiestatis adscisceret, futurum laborum quoque socium, quos Arctoae provinciae diu fessae poscebant.
+</div><br/>
