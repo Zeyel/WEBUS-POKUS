@@ -39,15 +39,9 @@
 					$rnd = mt_rand(0, count($Recettes) - 1);
 					$nomFichier = "Mystère";
 
-					foreach($Association as $key => $nom) {
-					if($Recettes[$rnd]['titre'] == $key)
+					if(array_key_exists($Recettes[$rnd]['titre'], $Association)){
 						$nomFichier = $Association[$Recettes[$rnd]['titre']];
 					}
-					/* A CHECK
-
-					if(in_array($Recettes[$rnd]['titre'], (key($Association)))){
-						$nomFichier = $Association[$Recettes[$rnd]['titre']];
-					}*/
 
 					echo'
 				<div class="row">
