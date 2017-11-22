@@ -67,6 +67,7 @@ $uti = '.var_export($uti, true).';
 ?>'
 		);
 			fclose($fichier);
+			
 			//on redirige
 			header('Location: index.php?page=succes');
 			echo"BONJOUR";

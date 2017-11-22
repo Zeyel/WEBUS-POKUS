@@ -1,5 +1,4 @@
 <div class = 'tree'>
-		
 	<?php
 		function echo_hierarchie($nom, $Hierarchie){
 			
@@ -23,12 +22,14 @@
 		
 		include("Donnees.inc.php");
 		
+		//On cherche les super catégories
 		foreach($Hierarchie as $apellation=>$Categs){
 			if(!array_key_exists('super-categorie', $Categs)){
 				$SuperCategs[] = $apellation;
 			}
 		}
 		
+		//On l'arbre de chaque sous-catégorie
 		foreach($SuperCategs as $SuperCateg){
 			echo_hierarchie($SuperCateg, $Hierarchie);
 		}
@@ -36,11 +37,13 @@
 	?>
 	
 	<script type="text/javascript">
+		//Si on clique sur un élément de l'arbre
 		$(".Collapsable").click(function () {
+			//On affiche / cache les éléments
 			$(this).parent().children().toggle();
 			$(this).toggle();
 			
-			//test
+			//On cherche les cocktails correspondant avec une requête AJAX
 			document.getElementById("cocktails").innerHTML = "Traitement en cours ...";
 			
 			var url = 'afficheCocktail.php?categ=' + $(this).html();
@@ -50,6 +53,7 @@
 			})
 		});
 
+		//referme toute la hierarchie de l'arbre
 		$(".Collapsable").each(function(){
 			$(this).parent().children().toggle();
 			$(this).toggle();
@@ -58,5 +62,5 @@
 </div>
 
 <div class='content' id='cocktails'>
-	
-</main>
+	Cliquez sur une catégorie pour commencer !
+</div>
