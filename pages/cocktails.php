@@ -39,42 +39,24 @@
 		$(".Collapsable").click(function () {
 			$(this).parent().children().toggle();
 			$(this).toggle();
+			
+			//test
+			document.getElementById("cocktails").innerHTML = "Traitement en cours ...";
+			
+			var url = 'afficheCocktail.php?categ=' + $(this).html();
+			
+			$.post(url, function(data){
+				$('#cocktails').html(data);
+			})
 		});
 
 		$(".Collapsable").each(function(){
-
 			$(this).parent().children().toggle();
 			$(this).toggle();
 		});
 	</script>
 </div>
 
-<div class='content'>
+<div class='content' id='cocktails'>
 	
-	
-	<?php
-	   function afficheCocktail($Cocktail){
-		   echo'
-			<div class="container jumbotron">
-				<h1>'.$Cocktail['titre'].'</h1><br/>
-				<h3>Liste des ingredients : </h3>
-				<ul>
-			';
-			foreach($Cocktail['index'] as $ingredient){
-				echo'
-					<li>'.$ingredient.'</li>';
-			}
-				
-			echo'
-				</ul>
-				<h3> Préparation : </h3>
-				'.$Cocktail['preparation'].'
-			</div>';
-	   }
-	   	   
-		foreach($Recettes as $Cocktail){
-			afficheCocktail($Cocktail);
-		}
-	
-	?>
 </main>
