@@ -21,38 +21,39 @@
 		}
 	}
 ?>
-
-<div class="container-fluid">
-	<!-- Barre de connexion-->
-	<div class ="row">
-		<div class='col-md-4 text-center'>
-			<h1>Cocktailotron</h1>
-		</div>
-		<?php
-			if(!isset($_SESSION['uti'])){
-				echo"
-		<div class ='col float-right'>
-			<div class='float-right'>
+<!-- Barre de connexion-->
+<div class ="row">
+	<div class='col-md-4 text-center'>
+		<h1>Cocktailotron</h1>
+	</div>
+	<?php
+		if(!isset($_SESSION['uti'])){
+			echo"
+	<div class ='col-md-8'>
+		<div class='row float-right'>
+			<div class='col'>
 				<form class='form-inline' action='#' method='post'>
 					<input name='pseudo' type='pseudo' class='form-control' placeholder='Pseudo'>
 					<input name='mdp' type='password' class='form-control' placeholder='Password'>
 					<button name='submit' type='submit' class='btn btn-default'>Connexion</button>
-				</form>
+				</form>	
 				<a href='index.php?page=inscription'>Pas encore inscrit ?</a>
 			</div>
-		</div>";
-			}
-			else{
-				echo"
-		<div class ='col float-right'>
-			<div class='float-right'>
+		</div>
+	</div>";
+		}
+		else{
+			echo"
+	<div class ='col-md-8'>
+		<div class ='row float-right'>
+			<div class='col'>
 				<form class='form-inline' action='#' method='post'>
 					<label for='deconnexion' class='col col-form-label'>Connecté en tant que : ".$_SESSION['uti']."</label>
 					<button name='deconnexion' type='submit' class='btn btn-default'>Deconnexion</button>
 				</form>
 			</div>
-		</div>";
-			}
-		?>
-	</div>
+		</div>
+	</div>";
+		}
+	?>
 </div>

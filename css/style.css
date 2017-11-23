@@ -1,51 +1,5 @@
-html {
-  height: 100%;
-}
-
-html body {
-  height: 100%;
-  overflow: hidden;
-}
-
-main {
-  position: absolute;
-  width : 100%;
-  top: 130px;
-  bottom: 30px;
-  overflow-y: scroll;
-}
-
-header nav {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.tree {
-  position: absolute;
-    left: 0px;
-    width : 30%;
-    top: 0px;
-    bottom : 30px;
-}
-
-.content{
-  position: absolute;
-  width : 65%;
-  top: 0px;
-  left:30%;
-  bottom: 30px;
-  overflow-y: scroll;
-}
-
-footer {
-    position: absolute;
-    whidth : 100%;
-    bottom: 0;
-    height: 30px;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+/* Show it is fixed to the top */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
 }
