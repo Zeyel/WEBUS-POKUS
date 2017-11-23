@@ -2,25 +2,25 @@
 
 	include("Donnees.inc.php");
 	include("Association.inc.php");
-		
+
 	$ingredients = array();
 
 	function getIngredients($categ){
 		global $Hierarchie;
 		global $ingredients;
-		
-		if(!array_key_exists('sous-categorie', $Hierarchie[$categ])){ 			
+
+		if(!array_key_exists('sous-categorie', $Hierarchie[$categ])){
 			//si notre ingrédient n'a pas de ss-categorie
 			$ingredients[$categ] = $categ;
 		}
-		else{				
+		else{
 			//sinon on regarde ses sous categorie
 			foreach($Hierarchie[$categ]['sous-categorie'] as $ssCateg){
 				getIngredients($ssCateg, $ingredients);
 			}
-		}		
+		}
 	}
-	
+
 	function recoupe($t1, $t2){
 		foreach($t1 as $valT1){
 			foreach($t2 as $valT2){
@@ -31,26 +31,26 @@
 		}
 		return false;
 	}
-			
+
 	$categ = $_GET['categ'];
 	getIngredients($categ);
-	
+
 	include("Donnees.inc.php");
 	$Cocktails = array();
-	
+
 	foreach($Recettes as $Cocktail){
 		if(recoupe($Cocktail['index'], $ingredients) === true){
 			$Cocktails[] = $Cocktail;
 		}
 	}
-	
+
 	foreach($Cocktails as $Cocktail){
 		$nomFichier = "Mystère.jpg";
 
 		if(array_key_exists($Cocktail['titre'], $Association)){
 			$nomFichier = $Association[$Cocktail['titre']].'.jpg';
 		}
-		
+
 		echo'
 		<div class="container jumbotron">
 			<div class="row">
@@ -74,6 +74,6 @@
 			'.$Cocktail['preparation'].'
 		</div>';
 	}
-		
-		
+
+
 ?>
