@@ -44,7 +44,18 @@
 					//On affiche / cache les éléments
 					$(this).parent().children().toggle();
 					$(this).toggle();
+					
+					$(".Collapsable").each(function(){
+						$(this).css({
+							'color': 'black',
+							'text-decoration': 'none'
+						});
+					});
 
+					$(this).css({
+						'color': 'blue',
+						'text-decoration': 'underline'
+					});
 					//On cherche les cocktails correspondant avec une requête AJAX
 					document.getElementById("cocktails").innerHTML = "Traitement en cours ...";
 
