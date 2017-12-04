@@ -2,8 +2,6 @@
 <?php
 
 $Favoris=array (
-  'pokemon123' => 'Bloody Mary', 'Coconut Kiss'
-
-);
+  'pokemon123' => 'Bloody Mary', 'Coconut kiss');
 
 ?>

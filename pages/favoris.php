@@ -8,7 +8,7 @@ include "Donnees.inc.php";
 if(isset($_SESSION['uti'])) {
   include "./utilisateurs/".$_SESSION['uti'].".inc.php";
   include "favoris.inc.php";
-  foreach($Favoris[$_SESSION['uti']] as $fav) {
+  foreach($Favoris as $fav) {
     foreach($Recettes as $Cocktail) {
       if ($fav == $Cocktail['titre']) {
     echo('
@@ -26,9 +26,6 @@ if(isset($_SESSION['uti'])) {
 		echo('
 					</ul>
 				</div>
-				<div class="col-md-2">
-						<img class="d-block img-fluid" src="Photos/'.$nomFichier.'">
-				</div>
 			</div>
 			<h3> Préparation : </h3>
 			'.$Cocktail['preparation'].'
@@ -36,5 +33,8 @@ if(isset($_SESSION['uti'])) {
   }
 }
 }
+}
+else {
+  printf("Il faut être connecté pour pouvoir voir ses cocktails favoris.");
 }
 ?>
