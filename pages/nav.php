@@ -4,15 +4,15 @@
 			<button class="btn btn-block">Accueil</button>
 		</a>
 	</div>
-	
+
 	<div class="col text-center">
 		<a href='index.php?page=cocktails'>
 			<button class="btn btn-block">Cocktails</button>
 		</a>
 	</div>
-	
+
 	<div class="col text-center">
-		<a href='index.php?page=acceuil'>
+		<a href='index.php?page=favoris'>
 			<button class="btn btn-block">Mes favoris</button>
 		</a>
 	</div>
