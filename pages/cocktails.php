@@ -45,6 +45,7 @@
 					$(this).parent().children().toggle();
 					$(this).toggle();
 					
+					//On met l'élément courrant en évidence
 					$(".Collapsable").each(function(){
 						$(this).css({
 							'color': 'black',
@@ -56,6 +57,7 @@
 						'color': 'blue',
 						'text-decoration': 'underline'
 					});
+					
 					//On cherche les cocktails correspondant avec une requête AJAX
 					document.getElementById("cocktails").innerHTML = "Traitement en cours ...";
 

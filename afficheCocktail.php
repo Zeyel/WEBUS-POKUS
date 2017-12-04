@@ -67,7 +67,10 @@
 					</ul>
 				</div>
 				<div class="col-md-2">
-						<img class="d-block img-fluid" src="Photos/'.$nomFichier.'">
+							<img class="d-block img-fluid" src="Photos/'.$nomFichier.'">
+				</div>
+				<div>
+					<img class="d-block img-fluid" height="40" width="40" src="Photos/pasfav.png">
 				</div>
 			</div>
 			<h3> Préparation : </h3>
