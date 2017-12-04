@@ -35,6 +35,6 @@ if(isset($_SESSION['uti'])) {
 }
 }
 else {
-  printf("Il faut être connecté pour pouvoir voir ses cocktails favoris.");
+  printf("<br /> Désolé. Il faut être connecté pour pouvoir voir ses cocktails favoris.");
 }
 ?>
